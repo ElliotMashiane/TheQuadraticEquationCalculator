@@ -7,7 +7,7 @@ window = tk.Tk()
 window.title("Quadratic Equation Solver")
 
 # Create the GUI size window
-window.geometry("500x600")
+window.geometry("500x400")
 
 # Make the GUI window non-resizable
 window.resizable(False, False)
@@ -36,6 +36,11 @@ entry_c.place(x=200, y=90)
 button = tk.Button(window, text="Calculate", font=(
     "Arial", 12, "bold"), padx=10, pady=10)
 button.place(x=200, y=130)
+
+# Text widget for output
+output_text = tk.Text(window, font=("Arial", 12),
+                      height=5, width=50, bg="lightgrey")
+output_text.place(x=22, y=200)
 
 # Start of the GUI event loop
 window.mainloop()
