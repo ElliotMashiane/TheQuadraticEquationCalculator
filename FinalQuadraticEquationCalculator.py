@@ -51,6 +51,14 @@ def calculate_quadratic_equation():
     output_text.insert(tk.END, result)  # Insert the new result
 
 
+def clear_inputs():
+    # Clear all entry fields and output text
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    entry_c.delete(0, tk.END)
+    output_text.delete("1.0", tk.END)
+
+
 # Create the GUI window
 window = tk.Tk()
 window.title("Quadratic Equation Solver")
@@ -77,14 +85,19 @@ entry_c = tk.Entry(window, font=("Arial", 12))
 entry_c.place(x=200, y=90)
 
 # The calculate BUTTON
-button = tk.Button(window, text="Calculate", font=(
+calculate_button = tk.Button(window, text="Calculate", font=(
     "Arial", 12, "bold"), padx=10, pady=10, command=calculate_quadratic_equation)
-button.place(x=200, y=130)
+calculate_button.place(x=200, y=130)
 
 # Text widget for output
 output_text = tk.Text(window, font=("Arial", 12),
                       height=5, width=50, bg="lightgrey")
 output_text.place(x=22, y=200)
+
+# The clear Button
+clear_button = tk.Button(window, text="Clear", font=(
+    "Arial", 12, "bold"), padx=10, pady=10, command=clear_inputs)
+clear_button.place(x=220, y=300)
 
 # Start of the GUI event loop
 window.mainloop()
