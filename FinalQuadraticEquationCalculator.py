@@ -21,7 +21,9 @@ def calculate_quadratic_equation():
             if discriminant > 0:  # Real and different roots
                 # Integer square root for rationality check
                 square_r = math.sqrt(discriminant)
-                if square_r ** 2 == discriminant:  # Check if it's a perfect square
+
+                # Check if it's a perfect square
+                if math.isqrt(int(discriminant))**2 == discriminant:
                     solution1 = (-b - square_r) / (2 * a)
                     solution2 = (-b + square_r) / (2 * a)
                     result = (f"The solutions are {solution1} and {solution2}, "
