@@ -26,12 +26,12 @@ def calculate_quadratic_equation():
                 if math.isqrt(int(discriminant))**2 == discriminant:
                     solution1 = (-b - square_r) / (2 * a)
                     solution2 = (-b + square_r) / (2 * a)
-                    result = (f"The solutions are {solution1} and {solution2}, "
+                    result = (f"The solutions are {solution1} and {solution2},\n "
                               f"they are real, different, and rational numbers.")
                 else:
                     solution1 = (-b - math.sqrt(discriminant)) / (2 * a)
                     solution2 = (-b + math.sqrt(discriminant)) / (2 * a)
-                    result = (f"The solutions are {solution1} and {solution2}, "
+                    result = (f"The solutions are {solution1} and {solution2},\n "
                               f"they are real, different, and irrational numbers.")
             elif discriminant == 0:  # Real and same roots
                 solution = -b / (2 * a)
@@ -40,7 +40,7 @@ def calculate_quadratic_equation():
             else:  # Imaginary/non-real solutions
                 solution1 = (-b - cmath.sqrt(discriminant)) / (2 * a)
                 solution2 = (-b + cmath.sqrt(discriminant)) / (2 * a)
-                result = (f"The solutions are {solution1} and {solution2}, "
+                result = (f"The solutions are {solution1} and {solution2},\n "
                           f"they are imaginary/non-real numbers.")
 
     except ValueError:
